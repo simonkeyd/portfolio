@@ -7,6 +7,7 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+enableEmoji: true
 
 minify:
   disableXML: true
@@ -40,16 +41,16 @@ params:
   disableThemeToggle: true
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   disableSpecial1stPost: false
   disableScrollToTop: true
   comments: false
-  hidemeta: true
+  hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   assets:
@@ -69,11 +70,11 @@ params:
 
   cover:
     hidden: false # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
 
   editPost:
-    URL: "https://github.com/simonkeyd/portfolio"
+    URL: "https://github.com/simonkeyd/simonkeyd.github.io/tree/main/content/"
     Text: "Free rejected PR" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -93,9 +94,15 @@ menu:
       name: tags
       url: /tags/
       weight: 10
+    - identifier: code
+      name: <>
+      url: https://github.com/simonkeyd/simonkeyd.github.io/
+      weight: 20
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 markup:
   goldmark:
     renderer:
       hardWraps: true
+  highlight:
+    style: native
